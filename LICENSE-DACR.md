@@ -14,7 +14,8 @@ Covered README identity:
 - Location: Fort Worth, TX
 - Original framework influence: Jabez Ivan Joshiraj's 4-Step Framework
 - Director Intelligence Layer: Erwin Maurice McDonald
-- Repository reference: https://github.com/emcdo411/elite-jobseeker-agent-
+- README reference: https://github.com/emcdo411/elite-jobseeker-agent-/tree/main
+- License file location: https://github.com/emcdo411/elite-jobseeker-agent-/blob/main/DACR%20LICENSE.md
 
 The README, agent prompts, phase architecture, Director Intelligence Layer, output standards, activation triggers, workflow language, and related framework materials are collectively referred to as the "Framework" in this license.
 
@@ -44,7 +45,8 @@ Epoch Frameworks Career Intelligence
 Director Intelligence Layer by Erwin Maurice McDonald
 Epoch Frameworks LLC, Fort Worth, TX
 Licensed under DACR v2.7
-Repository: https://github.com/emcdo411/elite-jobseeker-agent-
+README: https://github.com/emcdo411/elite-jobseeker-agent-/tree/main
+License: https://github.com/emcdo411/elite-jobseeker-agent-/blob/main/DACR%20LICENSE.md
 ```
 
 If the use references the underlying influence, include:
@@ -174,6 +176,14 @@ Users are responsible for verifying all resume content, dates, titles, claims, c
 
 This license is intended to be read together with the Elite Jobseeker Agent README. The README defines the project identity, phase architecture, output standards, repository structure, activation triggers, attribution language, and intended scope of the Framework.
 
+README location:
+
+https://github.com/emcdo411/elite-jobseeker-agent-/tree/main
+
+DACR license location:
+
+https://github.com/emcdo411/elite-jobseeker-agent-/blob/main/DACR%20LICENSE.md
+
 If this license is copied apart from the README, the license still applies to the Framework described by the README and any substantially similar copy, derivative, adaptation, implementation, or redistribution of that Framework.
 
 ## Copyright and Rights Notice
@@ -181,4 +191,5 @@ If this license is copied apart from the README, the license still applies to th
 Copyright (c) 2026 Erwin Maurice McDonald.
 
 Epoch Frameworks LLC. All rights reserved except for the limited permissions expressly granted under this DACR License v2.7.
+
 
