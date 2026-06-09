@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Elite Jobseeker Agent is a money-green career intelligence operating system with an embedded AI agent for senior jobseekers." />
-<meta property="og:title" content="Elite Jobseeker Agent | Career Intelligence OS" />
-<meta property="og:description" content="Stop applying blind. Start operating with signal, positioning, and market intelligence." />
+<meta name="description" content="Executive Talent Assessment is a money-green career intelligence platform for senior professionals targeting transformation, AI, and consulting leadership roles." />
+<meta property="og:title" content="Executive Talent Assessment | Elite Jobseeker Agent" />
+<meta property="og:description" content="Identity. Positioning. Compensation. Leadership Signal. See how a hiring manager or consulting partner is likely to evaluate you." />
 <meta property="og:type" content="website" />
 <meta name="theme-color" content="#001f12" />
-<title>Elite Jobseeker Agent | Career Intelligence OS</title>
+<title>Executive Talent Assessment | Elite Jobseeker Agent</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,8 @@
     --green-bdr: rgba(0,255,136,0.30);
     --gold: #d7b65f;
     --gold-dim: rgba(215,182,95,0.12);
-    --gold-bdr: rgba(215,182,95,0.28);
+    --gold-bdr: rgba(215,182,95,0.30);
+    --red: #ff6b6b;
     --white-bdr: rgba(255,255,255,0.16);
     --text-primary: #f4fff8;
     --text-secondary: #b9d7c5;
@@ -68,7 +69,6 @@
 
   a { color: inherit; text-decoration: none; }
   button, input, textarea, select { font: inherit; }
-
   .shell { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
 
   nav {
@@ -141,7 +141,7 @@
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.08fr .92fr;
+    grid-template-columns: 1.03fr .97fr;
     gap: 54px;
     align-items: center;
   }
@@ -172,7 +172,7 @@
 
   .hero-title {
     font-family: var(--display);
-    font-size: clamp(4.4rem, 10.5vw, 11.6rem);
+    font-size: clamp(4.2rem, 10vw, 11rem);
     line-height: .86;
     font-weight: 400;
     letter-spacing: .004em;
@@ -238,9 +238,9 @@
 
   .btn-primary:hover, .btn-secondary:hover, .btn-ghost:hover { transform: translateY(-2px); }
 
-  .product-card {
+  .assessment-card {
     position: relative;
-    min-height: 620px;
+    min-height: 640px;
     border: 1px solid var(--green-bdr);
     border-radius: 34px;
     background: linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.035));
@@ -249,7 +249,7 @@
     padding: 28px;
   }
 
-  .product-card::before {
+  .assessment-card::before {
     content:"";
     position:absolute;
     inset:-120px -90px auto auto;
@@ -260,7 +260,7 @@
     border-radius:99px;
   }
 
-  .label-panel {
+  .assessment-panel {
     position:relative;
     z-index:1;
     height:100%;
@@ -270,123 +270,66 @@
     padding:28px;
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
-    gap:28px;
+    gap:22px;
   }
 
   .stamp {
     display:flex;
     justify-content:space-between;
     gap:12px;
-    align-items:flex-start;
     color:#c8f7dc;
     font-family: var(--mono);
     font-size:.64rem;
     font-weight:700;
     letter-spacing:.14em;
     text-transform:uppercase;
-    margin-bottom: 32px;
   }
 
-  .product-name {
+  .score-hero {
+    border-top: 8px solid #fff;
+    border-bottom: 8px solid #fff;
+    padding: 18px 0 12px;
+  }
+
+  .score-hero h3 {
     font-family: var(--display);
-    font-size: clamp(3.8rem,7.2vw,7.3rem);
-    line-height:.84;
+    font-size: clamp(3rem, 6vw, 5.6rem);
+    line-height:.86;
+    font-weight:400;
     text-transform:uppercase;
-    letter-spacing:.005em;
   }
 
-  .product-name span { display:block; color: var(--green); }
+  .score-hero span { color: var(--green); }
 
-  .formula-strip {
+  .mini-scores {
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-    margin-top:24px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
-  .formula {
+  .mini-score {
     border:1px solid rgba(255,255,255,.14);
     border-radius:16px;
-    padding:16px;
+    padding:14px;
     background:rgba(255,255,255,.055);
   }
 
-  .formula strong {
-    display:block;
-    font-family:var(--display);
-    font-size:2.25rem;
-    line-height:.92;
-    font-weight:400;
-  }
-
-  .formula small {
-    display:block;
-    margin-top:8px;
-    color:#b7cabe;
-    font-weight:850;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    font-size:.62rem;
-  }
-
-  .nutrition {
-    border-top:8px solid white;
-    border-bottom:8px solid white;
-    padding:16px 0 10px;
-    margin-top:18px;
-  }
-
-  .nutrition h3 {
+  .mini-score strong {
     font-family: var(--display);
-    font-size:2.35rem;
-    line-height:.9;
-    font-weight:400;
-    text-transform:uppercase;
-  }
-
-  .nutri-row {
-    display:flex;
-    justify-content:space-between;
-    border-top:1px solid rgba(255,255,255,.55);
-    padding:9px 0;
-    color:white;
-    font-weight:900;
-    text-transform:uppercase;
-    font-size:.76rem;
-    letter-spacing:.08em;
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 14px;
-    margin-top: 48px;
-  }
-
-  .stat {
-    border:1px solid var(--green-bdr);
-    border-radius: 20px;
-    padding: 20px;
-    background: rgba(0,0,0,.26);
-  }
-
-  .stat-num {
-    font-family: var(--display);
-    font-size: clamp(2.2rem,4vw,4.2rem);
+    font-size: 2.65rem;
     line-height: .9;
-    color:#fff;
+    font-weight: 400;
     display:block;
   }
 
-  .stat-label {
+  .mini-score small {
     display:block;
-    margin-top: 10px;
-    color: var(--text-muted);
-    font-weight: 900;
-    font-size: .68rem;
-    letter-spacing: .10em;
-    text-transform: uppercase;
+    color: #b7cabe;
+    margin-top: 7px;
+    font-size:.63rem;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    font-weight:900;
   }
 
   section { padding: 78px 0; border-top: 1px solid rgba(255,255,255,.12); }
@@ -422,64 +365,12 @@
     font-size: 1.1rem;
     color: var(--text-secondary);
     line-height: 1.72;
-    max-width: 780px;
+    max-width: 820px;
     margin-top: 1rem;
     font-weight: 560;
   }
 
-  .phase-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 16px;
-  }
-
-  .phase-card {
-    background: linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.038));
-    border: 1px solid rgba(255,255,255,.14);
-    border-radius: 26px;
-    padding: 26px;
-    transition: border-color .15s, transform .15s, box-shadow .15s;
-    min-height: 270px;
-  }
-
-  .phase-card:hover {
-    border-color: var(--green-bdr);
-    transform: translateY(-2px);
-    box-shadow: 0 24px 80px rgba(0,0,0,.26);
-  }
-
-  .phase-num {
-    font-family: var(--mono);
-    font-size: 10px;
-    font-weight: 700;
-    padding: 5px 10px;
-    border-radius: 999px;
-    background: var(--green-dim);
-    color: var(--green-lt);
-    display: inline-block;
-    margin-bottom: 18px;
-    border: 1px solid var(--green-bdr);
-    text-transform: uppercase;
-    letter-spacing: .10em;
-  }
-
-  .phase-title {
-    font-family: var(--display);
-    font-size: 2.1rem;
-    font-weight: 400;
-    line-height: .92;
-    text-transform: uppercase;
-    margin-bottom: 14px;
-  }
-
-  .phase-body {
-    font-size: .92rem;
-    color: var(--text-secondary);
-    line-height: 1.62;
-    font-weight: 520;
-  }
-
-  .agent-shell {
+  .assessment-shell {
     border: 1px solid var(--green-bdr);
     border-radius: 34px;
     background:
@@ -489,7 +380,7 @@
     overflow: hidden;
   }
 
-  .agent-top {
+  .assessment-top {
     padding: 26px;
     border-bottom: 1px solid rgba(255,255,255,.14);
     display: flex;
@@ -499,86 +390,38 @@
     flex-wrap: wrap;
   }
 
-  .agent-top h3 {
+  .assessment-top h3 {
     font-family: var(--display);
-    font-size: clamp(2.5rem,5vw,5.4rem);
+    font-size: clamp(2.8rem,5.4vw,5.8rem);
     line-height:.88;
     font-weight:400;
     text-transform:uppercase;
   }
 
-  .agent-top p {
+  .assessment-top p {
     color: var(--text-secondary);
     line-height: 1.55;
-    max-width: 620px;
+    max-width: 650px;
     font-weight: 540;
   }
 
-  .phase-tabs {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    padding: 18px 26px;
-    border-bottom: 1px solid rgba(255,255,255,.14);
-    background: rgba(0,0,0,.16);
-  }
-
-  .phase-tab {
-    border: 1px solid rgba(255,255,255,.14);
-    background: rgba(255,255,255,.055);
-    color: var(--text-secondary);
-    padding: 9px 12px;
-    border-radius: 999px;
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-
-  .phase-tab.active {
-    border-color: var(--green-bdr);
-    background: var(--green-dim);
-    color: var(--green-lt);
-  }
-
-  .chat-wrap {
+  .assessment-grid {
     display:grid;
-    grid-template-columns: .76fr 1.24fr;
-    min-height: 670px;
+    grid-template-columns: .88fr 1.12fr;
+    min-height: 740px;
   }
 
-  .chat-side {
-    padding: 24px;
+  .assessment-inputs {
+    padding: 28px;
     border-right: 1px solid rgba(255,255,255,.14);
     background: rgba(0,0,0,.18);
   }
 
-  .chat-side h4 {
-    font-family: var(--display);
-    font-size: 2.05rem;
-    line-height: .92;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 12px;
+  .assessment-output {
+    padding: 28px;
   }
 
-  .chat-side p {
-    color: var(--text-secondary);
-    line-height: 1.62;
-    font-size: .92rem;
-    margin-bottom: 18px;
-  }
-
-  .config-box {
-    border:1px solid rgba(255,255,255,.14);
-    border-radius:20px;
-    padding:16px;
-    background:rgba(0,0,0,.22);
-    margin-bottom: 18px;
-  }
-
-  .field { margin-bottom: 14px; }
+  .field { margin-bottom: 16px; }
   .field label {
     display:block;
     font-family: var(--mono);
@@ -589,183 +432,168 @@
     margin-bottom: 8px;
   }
 
-  .field input {
+  .field input, .field textarea, .field select {
     width:100%;
     border:1px solid rgba(255,255,255,.15);
     background: rgba(0,0,0,.34);
     color: #fff;
     border-radius: 14px;
-    padding: 12px 13px;
+    padding: 13px 14px;
     outline: none;
   }
 
-  .field input:focus { border-color: var(--green-bdr); box-shadow: 0 0 0 3px rgba(0,255,136,.08); }
+  .field textarea { min-height: 130px; resize: vertical; line-height: 1.5; }
+  .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--green-bdr); box-shadow: 0 0 0 3px rgba(0,255,136,.08); }
 
-  .quick-prompts {
+  .agent-actions {
     display:flex;
-    flex-direction:column;
-    gap:9px;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top: 18px;
   }
 
-  .chip {
-    border:1px solid rgba(255,255,255,.13);
-    background:rgba(255,255,255,.055);
-    color:#dfffea;
-    padding:11px 12px;
-    border-radius:14px;
-    text-align:left;
-    cursor:pointer;
-    font-size:.82rem;
-    line-height:1.35;
-  }
-
-  .chip:hover { border-color: var(--green-bdr); color: var(--green-lt); }
-
-  .chat-main {
-    padding: 24px;
-    display:flex;
-    flex-direction:column;
-    min-height: 670px;
-  }
-
-  .chat-window {
-    flex: 1;
-    overflow-y: auto;
+  .output-card {
     border:1px solid rgba(255,255,255,.14);
     background: rgba(0,0,0,.25);
     border-radius: 24px;
-    padding: 18px;
-    min-height: 470px;
-    max-height: 540px;
+    min-height: 650px;
+    overflow: hidden;
   }
 
-  .msg {
-    display:flex;
-    margin-bottom: 14px;
+  .report-header {
+    padding: 22px;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+    background: rgba(0,255,136,.07);
   }
 
-  .msg.user { justify-content:flex-end; }
-
-  .bubble {
-    max-width: 82%;
-    border:1px solid rgba(255,255,255,.14);
-    border-radius: 18px;
-    padding: 14px 15px;
-    color:#ecfff4;
-    line-height:1.58;
-    font-size:.93rem;
-    white-space:pre-wrap;
+  .report-header h4 {
+    font-family: var(--display);
+    font-size: clamp(2.5rem, 4.7vw, 4.8rem);
+    line-height: .88;
+    font-weight: 400;
+    text-transform: uppercase;
   }
 
-  .msg.agent .bubble { background: rgba(0,255,136,.075); border-color: var(--green-bdr); }
-  .msg.user .bubble { background: rgba(255,255,255,.075); }
-
-  .typing {
-    display:none;
-    gap: 5px;
-    align-items:center;
-    color: var(--green-lt);
-    font-family: var(--mono);
-    font-size: 11px;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    margin: 12px 0;
-  }
-
-  .typing span {
-    width:6px;height:6px;border-radius:50%;
-    background:var(--green);
-    animation: bounce 1s infinite ease-in-out;
-  }
-  .typing span:nth-child(2){animation-delay:.12s}
-  .typing span:nth-child(3){animation-delay:.24s}
-  @keyframes bounce { 0%,80%,100%{transform:translateY(0);opacity:.45} 40%{transform:translateY(-5px);opacity:1} }
-
-  .chat-form {
-    display:flex;
-    gap:10px;
-    margin-top: 14px;
-  }
-
-  .chat-form textarea {
-    flex:1;
-    min-height: 64px;
-    resize: vertical;
-    border:1px solid rgba(255,255,255,.15);
-    background: rgba(0,0,0,.34);
-    color:#fff;
-    border-radius:18px;
-    padding:14px;
-    outline:none;
-    line-height:1.45;
-  }
-
-  .chat-form textarea:focus { border-color: var(--green-bdr); box-shadow: 0 0 0 3px rgba(0,255,136,.08); }
-
-  .status-line {
-    font-size: .78rem;
-    color: var(--text-muted);
-    line-height: 1.5;
+  .report-header p {
     margin-top: 10px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    font-size:.92rem;
   }
 
-  .signal-list {
+  .score-grid {
     display:grid;
     grid-template-columns: repeat(2,1fr);
-    gap:12px;
+    gap: 12px;
+    padding: 18px;
   }
 
-  .signal-item {
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-    padding:18px;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.13);
-    border-radius:18px;
+  .metric {
+    border:1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.055);
+    border-radius: 18px;
+    padding: 17px;
   }
 
-  .signal-dot {
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:var(--green);
-    box-shadow:0 0 18px var(--green);
-    flex-shrink:0;
-    margin-top:6px;
+  .metric-label {
+    font-family: var(--mono);
+    color: var(--green-lt);
+    font-size: .62rem;
+    line-height: 1.35;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    min-height: 34px;
   }
 
-  .signal-text {
-    font-size:.92rem;
-    color:var(--text-secondary);
-    line-height:1.58;
+  .metric-value {
+    font-family: var(--display);
+    font-size: 2.65rem;
+    line-height: .9;
+    margin-top: 12px;
+  }
+
+  .metric-note {
+    color: var(--text-muted);
+    font-size:.78rem;
+    line-height: 1.45;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  .report-body {
+    padding: 18px;
+  }
+
+  .report-block {
+    border:1px solid rgba(255,255,255,.12);
+    border-radius: 18px;
+    padding: 18px;
+    margin-bottom: 12px;
+    background: rgba(0,0,0,.18);
+  }
+
+  .report-block h5 {
+    font-family: var(--mono);
+    color: var(--green-lt);
+    font-size: .70rem;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .report-block p, .report-block li {
+    color: var(--text-secondary);
+    line-height: 1.62;
+    font-size: .92rem;
     font-weight: 540;
   }
 
-  .upgrade-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:16px; }
+  .report-block ul { padding-left: 18px; }
 
-  .upgrade-card {
-    background:rgba(255,255,255,.06);
+  .small-note {
+    font-size: .78rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 12px;
+  }
+
+  .framework-grid {
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 10px;
+  }
+
+  .framework-card {
     border:1px solid rgba(255,255,255,.14);
-    border-radius:22px;
-    padding:24px;
+    border-radius: 20px;
+    padding: 18px;
+    background:rgba(255,255,255,.055);
+    min-height: 190px;
   }
 
-  .upgrade-card.gold { border-color: var(--gold-bdr); }
-  .upgrade-card-label {
+  .framework-card strong {
+    display:block;
+    font-family: var(--display);
+    font-size: 2.1rem;
+    line-height: .9;
+    color: var(--green);
+    margin-bottom: 14px;
+  }
+
+  .framework-card span {
+    display:block;
     font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: .13em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
+    font-size:.62rem;
+    text-transform:uppercase;
+    letter-spacing:.10em;
     color: var(--green-lt);
+    margin-bottom: 10px;
   }
-  .upgrade-card.gold .upgrade-card-label { color: var(--gold); }
 
-  .upgrade-card-text {
+  .framework-card p {
     color: var(--text-secondary);
-    font-size: .95rem;
-    line-height: 1.62;
+    line-height:1.55;
+    font-size:.84rem;
     font-weight: 540;
   }
 
@@ -788,7 +616,7 @@
 
   .final-cta-sub {
     color: var(--text-secondary);
-    max-width: 620px;
+    max-width: 660px;
     margin: 1.2rem auto 2rem;
     line-height: 1.7;
     font-weight: 550;
@@ -811,21 +639,22 @@
 
   footer a { color: var(--green-lt); }
 
+  @media (max-width: 1080px) {
+    .framework-grid { grid-template-columns: repeat(2,1fr); }
+  }
+
   @media (max-width: 980px) {
-    .hero-grid, .chat-wrap { grid-template-columns: 1fr; }
-    .chat-side { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.14); }
-    .phase-grid { grid-template-columns: 1fr 1fr; }
-    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .hero-grid, .assessment-grid { grid-template-columns: 1fr; }
+    .assessment-inputs { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+    .score-grid { grid-template-columns: 1fr 1fr; }
   }
 
   @media (max-width: 700px) {
     .nav-links a:not(.nav-cta) { display:none; }
     .hero { padding-top: 70px; }
-    .phase-grid, .signal-list, .upgrade-grid, .hero-stats { grid-template-columns: 1fr; }
-    .section-head { grid-template-columns: 1fr; gap: 14px; }
+    .section-head, .score-grid, .mini-scores, .framework-grid { grid-template-columns: 1fr; }
+    .section-head { gap: 14px; }
     .hero-title { font-size: clamp(4rem, 18vw, 7.2rem); }
-    .chat-form { flex-direction: column; }
-    .bubble { max-width: 94%; }
   }
 </style>
 </head>
@@ -834,14 +663,13 @@
 
 <nav>
   <div class="shell nav-inner">
-    <a href="#top" class="nav-brand"><span class="brand-mark"></span><span>Elite Jobseeker Agent</span></a>
+    <a href="#top" class="nav-brand"><span class="brand-mark"></span><span>Executive Talent Assessment</span></a>
     <div class="nav-links">
-      <a href="#system">System</a>
-      <a href="#agent-tool">Use Tool</a>
-      <a href="#signals">Signals</a>
-      <a href="#stack">Stack</a>
+      <a href="#assessment">Assessment</a>
+      <a href="#framework">Framework</a>
+      <a href="#repo">Repo</a>
       <a href="https://github.com/emcdo411/elite-jobseeker-agent" target="_blank" rel="noopener">GitHub</a>
-      <a href="#agent-tool" class="nav-cta">Launch Agent →</a>
+      <a href="#assessment" class="nav-cta">Run Assessment →</a>
     </div>
   </div>
 </nav>
@@ -849,215 +677,195 @@
 <section class="hero">
   <div class="shell hero-grid">
     <div>
-      <div class="hero-eyebrow"><span class="pulse"></span> Career Intelligence Operating System · McDonald // 2026</div>
-      <h1 class="hero-title">ELITE JOBSEEKER AGENT</h1>
+      <div class="hero-eyebrow"><span class="pulse"></span> Elite Jobseeker Agent · Executive Assessment Layer</div>
+      <h1 class="hero-title">EXECUTIVE TALENT ASSESSMENT</h1>
       <p class="hero-sub">
-        <b>Stop applying blind. Start operating with signal.</b>
-        A money-green AI career intelligence system for experienced professionals who need market intelligence,
-        recruiter signal decoding, compensation targeting, and executive positioning in one workflow.
+        <b>Identity. Positioning. Compensation. Leadership Signal.</b>
+        See how a hiring manager, consulting partner, or executive recruiter is likely to evaluate your profile against a senior transformation opportunity.
       </p>
       <div class="hero-actions">
-        <a href="#agent-tool" class="btn-primary">Use The Agent Tool →</a>
-        <a href="#system" class="btn-secondary">Explore The System</a>
+        <a href="#assessment" class="btn-primary">Generate Assessment →</a>
+        <a href="#framework" class="btn-secondary">View The Scoring Model</a>
         <a href="https://github.com/emcdo411/elite-jobseeker-agent" target="_blank" rel="noopener" class="btn-ghost">View Repo</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num">$120K+</span><span class="stat-label">Comp Target Calibrated</span></div>
-        <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Years Enterprise Signal</span></div>
-        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Phase Framework</span></div>
-        <div class="stat"><span class="stat-num">ZERO</span><span class="stat-label">Generic Resume Spray</span></div>
       </div>
     </div>
 
-    <aside class="product-card" aria-label="Elite Jobseeker Agent product card">
-      <div class="label-panel">
-        <div>
-          <div class="stamp">
-            <span>Performance Career OS</span>
-            <span>v1.0</span>
-          </div>
-          <div class="product-name">
-            SIGNAL<br>
-            <span>POSITION</span>
-            CONVERT
-          </div>
-          <div class="formula-strip">
-            <div class="formula"><strong>PH0</strong><small>Identity Calibration</small></div>
-            <div class="formula"><strong>ATS</strong><small>Penetration Logic</small></div>
-            <div class="formula"><strong>HM</strong><small>Hiring Manager Fit</small></div>
-          </div>
+    <aside class="assessment-card" aria-label="Executive Talent Assessment dashboard preview">
+      <div class="assessment-panel">
+        <div class="stamp">
+          <span>Boardroom Evaluation Mode</span>
+          <span>v2.0</span>
         </div>
 
-        <div class="nutrition">
-          <h3>OPPORTUNITY FACTS</h3>
-          <div class="nutri-row"><span>Hidden Role Detection</span><span>High</span></div>
-          <div class="nutri-row"><span>Recruiter Signal Parsing</span><span>Active</span></div>
-          <div class="nutri-row"><span>Executive Narrative Fit</span><span>Built-In</span></div>
-          <div class="nutri-row"><span>API Key Exposure</span><span>Zero</span></div>
+        <div class="score-hero">
+          <h3>HIRING<br><span>CONFIDENCE</span><br>SCORE</h3>
+        </div>
+
+        <div class="mini-scores">
+          <div class="mini-score"><strong>87</strong><small>Executive Readiness Index</small></div>
+          <div class="mini-score"><strong>SM+</strong><small>Market Positioning Tier</small></div>
+          <div class="mini-score"><strong>HIGH</strong><small>Stakeholder Influence</small></div>
+          <div class="mini-score"><strong>$175K</strong><small>Stretch Comp Signal</small></div>
         </div>
       </div>
     </aside>
   </div>
 </section>
 
-<section id="system">
+<section id="framework">
   <div class="shell">
     <div class="section-head">
-      <div class="section-eyebrow">01 // System</div>
+      <div class="section-eyebrow">01 // Scoring Model</div>
       <div>
-        <h2 class="section-title">BUILT FOR THE PROFESSIONAL WHO IS DONE BEING MISREAD.</h2>
+        <h2 class="section-title">SEVEN SIGNALS THAT CHANGE THE CONVERSATION.</h2>
         <p class="section-sub">
-          The labor market rewards clarity before talent. This agent reframes a job search as an intelligence problem:
-          detect the right market, translate experience into buyer language, and identify openings before they become crowded.
+          The tool moves the job search away from generic resume advice and into a consulting-style evaluation model:
+          identity, market tier, compensation, stakeholder influence, transformation leadership, executive readiness, and hiring manager confidence.
         </p>
       </div>
     </div>
 
-    <div class="phase-grid">
-      <div class="phase-card"><div class="phase-num">PHASE 0</div><div class="phase-title">Identity Calibration Intake</div><div class="phase-body">Builds a Candidate Intelligence Brief covering market tier, signal strength, gaps, and positioning strategy.</div></div>
-      <div class="phase-card"><div class="phase-num">PHASE 1</div><div class="phase-title">Profile Dominance</div><div class="phase-body">LinkedIn and resume positioning logic designed for passive inbound, retained search visibility, and executive-level signal quality.</div></div>
-      <div class="phase-card"><div class="phase-num">PHASE 2</div><div class="phase-title">Target Acquisition</div><div class="phase-body">A disciplined filtering layer for $120K+ roles: urgency, title fit, company maturity, compensation clues, and direct hiring-manager potential.</div></div>
-      <div class="phase-card"><div class="phase-num">PHASE 3</div><div class="phase-title">ATS + Executive Tailoring</div><div class="phase-body">Generates role-specific positioning for two audiences at once: the ATS screen and the decision-maker reading for credibility.</div></div>
-      <div class="phase-card"><div class="phase-num">PHASE 4</div><div class="phase-title">Network Activation</div><div class="phase-body">Builds peer-to-peer outreach that reads like a senior operator reaching out to another professional.</div></div>
-      <div class="phase-card" style="border-color: var(--gold-bdr);"><div class="phase-num" style="background:var(--gold-dim);color:var(--gold);border-color:var(--gold-bdr);">SECURE</div><div class="phase-title">Proxy-Based AI</div><div class="phase-body">The page calls your Cloudflare Worker endpoint. The Worker calls Anthropic securely. Your API key never appears in GitHub Pages.</div></div>
+    <div class="framework-grid">
+      <div class="framework-card"><strong>01</strong><span>Identity Calibration Score</span><p>Measures whether the profile signals a coherent senior operator identity or reads like scattered experience.</p></div>
+      <div class="framework-card"><strong>02</strong><span>Market Positioning Tier</span><p>Classifies the candidate as Manager, Senior Manager, Director, or stretch-level executive signal.</p></div>
+      <div class="framework-card"><strong>03</strong><span>Compensation Alignment</span><p>Tests whether the evidence supports the desired salary band and where the stretch range begins.</p></div>
+      <div class="framework-card"><strong>04</strong><span>Stakeholder Influence</span><p>Evaluates C-suite exposure, executive communication, cross-functional leadership, and trust signal.</p></div>
+      <div class="framework-card"><strong>05</strong><span>Transformation Leadership</span><p>Scores change management, implementation ownership, AI adoption, governance, and delivery credibility.</p></div>
+      <div class="framework-card"><strong>06</strong><span>Executive Readiness</span><p>Assesses whether the candidate sounds ready to sit in the room, frame ambiguity, and advise leaders.</p></div>
+      <div class="framework-card"><strong>07</strong><span>Hiring Manager Confidence</span><p>The final decision signal: would a leader trust this candidate with an ambiguous, high-impact engagement?</p></div>
     </div>
   </div>
 </section>
 
-<section id="agent-tool">
+<section id="assessment">
   <div class="shell">
     <div class="section-head">
-      <div class="section-eyebrow">02 // Embedded Live Agent</div>
+      <div class="section-eyebrow">02 // Assessment Console</div>
       <div>
-        <h2 class="section-title">RUN THE AGENT WITHOUT LEAVING THE PAGE.</h2>
+        <h2 class="section-title">PASTE THE PROFILE. PASTE THE ROLE. GENERATE THE READOUT.</h2>
         <p class="section-sub">
-          This chat UI stays inside the index page. It sends requests to your Cloudflare Worker proxy, which securely talks to Anthropic.
-          Replace the endpoint constant in the script with your deployed Worker URL.
+          This version runs entirely inside the page as a polished executive-assessment generator. No backend required.
+          The output is designed to feel like a boutique consulting partner review, not a career-coach chatbot.
         </p>
       </div>
     </div>
 
-    <div class="agent-shell">
-      <div class="agent-top">
+    <div class="assessment-shell">
+      <div class="assessment-top">
         <div>
-          <h3>AGENT CONSOLE</h3>
-          <p>Six modes. Phase-specific system prompts. Session memory. Quick-start chips. No redirect. No public API key.</p>
+          <h3>ASSESSMENT ENGINE</h3>
+          <p>Enter the candidate profile and target role. The page generates a structured Executive Talent Assessment with scores, risks, positioning, and next actions.</p>
         </div>
         <div class="hero-actions">
-          <button class="btn-secondary" onclick="clearChat()">Clear Chat</button>
-          <a class="btn-ghost" href="https://github.com/emcdo411/elite-jobseeker-agent" target="_blank" rel="noopener">Repo</a>
+          <button class="btn-primary" onclick="runAssessment()">Generate</button>
+          <button class="btn-secondary" onclick="copyReport()">Copy Report</button>
+          <button class="btn-ghost" onclick="resetAssessment()">Reset</button>
         </div>
       </div>
 
-      <div class="phase-tabs" id="phaseTabs"></div>
-
-      <div class="chat-wrap">
-        <aside class="chat-side">
-          <h4 id="phaseTitle">General Agent</h4>
-          <p id="phaseDescription">Use this mode for general career intelligence, role targeting, and market positioning.</p>
-
-          <div class="config-box">
-            <div class="field">
-              <label for="candidateName">Candidate Name</label>
-              <input id="candidateName" placeholder="Example: Erwin Maurice McDonald" />
-            </div>
-            <div class="field">
-              <label for="targetRole">Target Role / Market</label>
-              <input id="targetRole" placeholder="Example: AI Business Analyst, Infrastructure AI, Director-Level Role" />
-            </div>
-            <div class="field">
-              <label for="compTarget">Compensation Target</label>
-              <input id="compTarget" placeholder="Example: $120K–$165K" />
-            </div>
+      <div class="assessment-grid">
+        <div class="assessment-inputs">
+          <div class="field">
+            <label for="candidateName">Candidate Name</label>
+            <input id="candidateName" placeholder="Example: Erwin Maurice McDonald" />
           </div>
 
-          <p style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:var(--green-lt);margin-bottom:10px;">Quick Starts</p>
-          <div class="quick-prompts" id="quickPrompts"></div>
-        </aside>
-
-        <main class="chat-main">
-          <div class="chat-window" id="chatWindow"></div>
-          <div class="typing" id="typing"><span></span><span></span><span></span> Agent thinking</div>
-
-          <form class="chat-form" onsubmit="sendMessage(event)">
-            <textarea id="userInput" placeholder="Paste your resume, LinkedIn summary, job description, recruiter message, or ask the agent what to do next..."></textarea>
-            <button class="btn-primary" type="submit">Send →</button>
-          </form>
-
-          <div class="status-line" id="statusLine">
-            Setup required: deploy the included Cloudflare Worker, add your Anthropic key as a Worker secret, then paste the Worker URL into WORKER_ENDPOINT.
+          <div class="field">
+            <label for="targetRole">Target Role / Level</label>
+            <input id="targetRole" placeholder="Example: Manager / Senior Manager – AI & Digital Transformation Consulting" />
           </div>
-        </main>
+
+          <div class="field">
+            <label for="compTarget">Compensation Target</label>
+            <input id="compTarget" placeholder="Example: $125K–$175K" />
+          </div>
+
+          <div class="field">
+            <label for="profile">Resume / Profile Material</label>
+            <textarea id="profile" placeholder="Paste resume summary, proof points, roles, metrics, tools, industries, leadership experience, and enterprise outcomes."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="roleSignal">Target Job / Market Signal</label>
+            <textarea id="roleSignal" placeholder="Paste the job description, recruiter note, company opportunity, or consulting role signal."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="tone">Assessment Lens</label>
+            <select id="tone">
+              <option>Consulting partner review</option>
+              <option>Hiring manager review</option>
+              <option>Executive recruiter review</option>
+              <option>Boardroom readiness review</option>
+            </select>
+          </div>
+
+          <div class="agent-actions">
+            <button class="btn-primary" onclick="runAssessment()">Generate Assessment</button>
+            <button class="btn-secondary" onclick="loadSample()">Load Sample</button>
+          </div>
+
+          <p class="small-note">
+            This static version does not send data anywhere. It generates a structured assessment locally and can be upgraded later to a secure API-backed version.
+          </p>
+        </div>
+
+        <div class="assessment-output">
+          <div class="output-card" id="report">
+            <div class="report-header">
+              <h4>EXECUTIVE TALENT ASSESSMENT</h4>
+              <p>Complete the inputs and click Generate Assessment to produce the scorecard.</p>
+            </div>
+
+            <div class="score-grid">
+              <div class="metric"><div class="metric-label">Identity Calibration Score</div><div class="metric-value">--</div><div class="metric-note">Senior identity coherence</div></div>
+              <div class="metric"><div class="metric-label">Market Positioning Tier</div><div class="metric-value">--</div><div class="metric-note">Role-level signal</div></div>
+              <div class="metric"><div class="metric-label">Compensation Alignment</div><div class="metric-value">--</div><div class="metric-note">Supported comp band</div></div>
+              <div class="metric"><div class="metric-label">Stakeholder Influence</div><div class="metric-value">--</div><div class="metric-note">Executive trust signal</div></div>
+              <div class="metric"><div class="metric-label">Transformation Leadership</div><div class="metric-value">--</div><div class="metric-note">Change and delivery signal</div></div>
+              <div class="metric"><div class="metric-label">Executive Readiness Index</div><div class="metric-value">--</div><div class="metric-note">Boardroom readiness</div></div>
+              <div class="metric"><div class="metric-label">Hiring Manager Confidence</div><div class="metric-value">--</div><div class="metric-note">Decision confidence</div></div>
+              <div class="metric"><div class="metric-label">Assessment Status</div><div class="metric-value">READY</div><div class="metric-note">Awaiting profile and role signal</div></div>
+            </div>
+
+            <div class="report-body">
+              <div class="report-block">
+                <h5>Executive Narrative</h5>
+                <p>The generated executive narrative will appear here.</p>
+              </div>
+              <div class="report-block">
+                <h5>Key Strengths</h5>
+                <ul><li>Strengths will appear here.</li></ul>
+              </div>
+              <div class="report-block">
+                <h5>Positioning Risks</h5>
+                <ul><li>Risks will appear here.</li></ul>
+              </div>
+              <div class="report-block">
+                <h5>Recommended Headline</h5>
+                <p>Headline recommendation will appear here.</p>
+              </div>
+              <div class="report-block">
+                <h5>Top 5 Next Actions</h5>
+                <ul><li>Next actions will appear here.</li></ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
-<section id="signals">
-  <div class="shell">
-    <div class="section-head">
-      <div class="section-eyebrow">03 // Intelligence Signals</div>
-      <div>
-        <h2 class="section-title">WHAT THIS CHECKS THAT GENERIC TOOLS MISS.</h2>
-        <p class="section-sub">
-          Above $120K, the search changes. Recruiters look for credibility signals, buyer language, scope, judgment, proof,
-          and whether the candidate sounds like someone who can sit in the room.
-        </p>
-      </div>
-    </div>
-
-    <div class="signal-list">
-      <div class="signal-item"><div class="signal-dot"></div><div class="signal-text">Are you presenting like a $120K+ operator, or accidentally framing yourself like a task executor?</div></div>
-      <div class="signal-item"><div class="signal-dot"></div><div class="signal-text">Does your resume show P&L, risk, scale, systems, stakeholder translation, and decision support?</div></div>
-      <div class="signal-item"><div class="signal-dot"></div><div class="signal-text">Are you targeting roles that are genuinely external-hire viable, or roles likely reserved for internal succession?</div></div>
-      <div class="signal-item"><div class="signal-dot"></div><div class="signal-text">Does your outreach sound like a peer-to-peer operator or like a candidate begging for consideration?</div></div>
-      <div class="signal-item"><div class="signal-dot"></div><div class="signal-text">Are you using company signals, funding, product shifts, and hiring motion to prioritize opportunities?</div></div>
-      <div class="signal-item"><div class="signal-dot"></div><div class="signal-text">Does your positioning translate technical fluency into business value instead of drowning in tools?</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="stack">
-  <div class="shell">
-    <div class="section-head">
-      <div class="section-eyebrow">04 // Stack</div>
-      <div>
-        <h2 class="section-title">THE JOB SEARCH BECOMES AN OPERATING SYSTEM.</h2>
-        <p class="section-sub">
-          This framework upgrades a normal job search into a signal-led, role-scored, narrative-driven execution stack.
-        </p>
-      </div>
-    </div>
-
-    <div class="upgrade-grid">
-      <div class="upgrade-card">
-        <div class="upgrade-card-label">Baseline Search</div>
-        <div class="upgrade-card-text">Fixes the resume. Applies to jobs. Waits for callbacks. Optimizes for volume. Often sounds like every other candidate in the market.</div>
-      </div>
-      <div class="upgrade-card gold">
-        <div class="upgrade-card-label">Director Intelligence Layer</div>
-        <div class="upgrade-card-text">Scores the market. Reads recruiter intent. Frames business impact. Builds targeted outreach. Converts experience into executive-grade signal.</div>
-      </div>
-      <div class="upgrade-card">
-        <div class="upgrade-card-label">$120K+ Reality</div>
-        <div class="upgrade-card-text">The higher the compensation, the more hiring depends on trust, perceived judgment, scope, network signal, and market timing.</div>
-      </div>
-      <div class="upgrade-card gold">
-        <div class="upgrade-card-label">Secure Deployment</div>
-        <div class="upgrade-card-text">GitHub Pages handles the front end. Cloudflare Worker handles the API secret. The audience stays inside the index page.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="final-cta">
+<div class="final-cta" id="repo">
   <div class="shell">
     <h2 class="final-cta-title">STOP APPLYING. START POSITIONING.</h2>
     <p class="final-cta-sub">
-      Use the embedded agent, generate the brief, then refine your market attack with sharper signal, stronger language, and fewer wasted applications.
+      This is the portfolio signal: a senior-market assessment product that turns resume material and job descriptions into executive-grade decision intelligence.
     </p>
     <div class="hero-actions" style="justify-content:center;">
-      <a href="#agent-tool" class="btn-primary">Launch Embedded Tool →</a>
+      <a href="#assessment" class="btn-primary">Run The Assessment →</a>
       <a href="https://github.com/emcdo411/elite-jobseeker-agent" target="_blank" rel="noopener" class="btn-secondary">View Repository</a>
     </div>
   </div>
@@ -1066,7 +874,7 @@
 <footer>
   <div class="shell">
     <p>
-      Elite Jobseeker Agent // Career Intelligence OS · Built by
+      Executive Talent Assessment // Elite Jobseeker Agent · Built by
       <a href="https://github.com/emcdo411" target="_blank" rel="noopener">Erwin Maurice McDonald</a>
       · Epoch Frameworks LLC // 2026 ·
       <a href="https://github.com/emcdo411/elite-jobseeker-agent" target="_blank" rel="noopener">github.com/emcdo411/elite-jobseeker-agent</a>
@@ -1075,234 +883,176 @@
 </footer>
 
 <script>
-/*
-  IMPORTANT:
-  1. Deploy the included cloudflare-worker.js.
-  2. Add ANTHROPIC_API_KEY as a Worker secret.
-  3. Replace the URL below with your Worker URL.
-*/
-const WORKER_ENDPOINT = "https://YOUR-WORKER-NAME.YOUR-SUBDOMAIN.workers.dev";
-
-const phases = {
-  general: {
-    label: "General",
-    title: "General Agent",
-    description: "General career intelligence, role targeting, compensation framing, and market positioning.",
-    opener: "I’m ready. Send me your resume/profile material, target role, recruiter message, or job description. I’ll help turn it into a sharper career intelligence brief.",
-    chips: [
-      "Build my Candidate Intelligence Brief.",
-      "Evaluate this job description against my background.",
-      "Rewrite my positioning for a $120K+ opportunity.",
-      "Create a peer-to-peer recruiter outreach message."
-    ],
-    system: "You are Elite Jobseeker Agent, a direct but supportive career intelligence system for senior professionals targeting $120K+ roles. Prioritize market signal, compensation alignment, executive positioning, recruiter psychology, business impact, and practical next actions. Do not flatter. Be specific."
-  },
-  phase0: {
-    label: "Phase 0",
-    title: "Phase 0 // Identity Calibration",
-    description: "Builds the Candidate Intelligence Brief before touching any role.",
-    opener: "Phase 0 loaded. Paste your resume, LinkedIn summary, and target compensation. I’ll calibrate your identity, seniority level, market fit, and positioning gaps.",
-    chips: [
-      "Run Phase 0 on my resume/profile.",
-      "What level am I really signaling?",
-      "Find my strongest executive positioning angle.",
-      "Identify gaps that make me look under-leveled."
-    ],
-    system: "You are running Phase 0: Identity Calibration for Elite Jobseeker Agent. Analyze the candidate before the job description. Produce a Candidate Intelligence Brief with seniority signal, compensation fit, market tier, credibility signals, under-leveling risks, positioning gaps, and next actions. Be rigorous."
-  },
-  phase1: {
-    label: "Phase 1",
-    title: "Phase 1 // Profile Dominance",
-    description: "LinkedIn and resume presence built for passive inbound and executive search signal.",
-    opener: "Phase 1 loaded. Send me your headline, About section, resume summary, or LinkedIn text. I’ll rebuild it for stronger senior-market signal.",
-    chips: [
-      "Rewrite my LinkedIn headline.",
-      "Rewrite my About section for executive search.",
-      "Turn this resume summary into senior-level positioning.",
-      "Find weak language in my profile."
-    ],
-    system: "You are running Phase 1: Profile Dominance. Rewrite and critique LinkedIn/resume positioning for passive recruiter inbound and senior professional credibility. Emphasize business outcomes, P&L, stakeholder translation, scale, technical fluency, and market fit."
-  },
-  phase2: {
-    label: "Phase 2",
-    title: "Phase 2 // Target Acquisition",
-    description: "Role filtering, company signal, compensation fit, and external-hire viability.",
-    opener: "Phase 2 loaded. Paste a job post, company target, recruiter note, or list of roles. I’ll score which ones deserve action.",
-    chips: [
-      "Score this role for fit and compensation.",
-      "Is this role worth applying to?",
-      "Find red flags in this job description.",
-      "Build my target-company logic."
-    ],
-    system: "You are running Phase 2: Target Acquisition. Score roles for seniority fit, compensation alignment, external-hire viability, company maturity, urgency, recruiter language, hidden red flags, and direct outreach potential. Return clear go/no-go guidance."
-  },
-  phase3: {
-    label: "Phase 3",
-    title: "Phase 3 // ATS + Executive Tailoring",
-    description: "Tailors for both ATS keyword match and hiring-manager confidence.",
-    opener: "Phase 3 loaded. Paste a job description and your resume bullets. I’ll create ATS keywords, executive framing, and a tailored submission strategy.",
-    chips: [
-      "Tailor my resume to this job.",
-      "Extract ATS keywords from this description.",
-      "Rewrite these bullets with executive impact.",
-      "Create a hiring-manager confidence brief."
-    ],
-    system: "You are running Phase 3: ATS Penetration + Executive Tailoring. Build two layers: ATS keyword alignment and executive decision-maker confidence. Rewrite bullets with quantified impact, business context, and credible scope. Explain what to change and why."
-  },
-  phase4: {
-    label: "Phase 4",
-    title: "Phase 4 // Network Activation",
-    description: "Peer-to-peer outreach, warm intros, recruiter notes, and decision-maker messaging.",
-    opener: "Phase 4 loaded. Give me a company, role, contact, or LinkedIn context. I’ll build concise outreach that sounds like a senior operator, not a desperate applicant.",
-    chips: [
-      "Write a peer-to-peer outreach note.",
-      "Write a recruiter follow-up.",
-      "Create a hiring manager DM.",
-      "Turn this connection into a warm intro."
-    ],
-    system: "You are running Phase 4: Network Activation. Create concise, credible outreach under 90 words unless asked otherwise. The voice should be senior, peer-to-peer, specific, warm, and non-needy. Use business signal, not generic networking language."
-  }
-};
-
-let activePhase = "general";
-let messages = [];
-
-function init(){
-  renderTabs();
-  switchPhase("general");
+function val(id){
+  return (document.getElementById(id).value || "").trim();
 }
 
-function renderTabs(){
-  const holder = document.getElementById("phaseTabs");
-  holder.innerHTML = "";
-  Object.entries(phases).forEach(([key, phase]) => {
-    const btn = document.createElement("button");
-    btn.className = "phase-tab";
-    btn.textContent = phase.label;
-    btn.onclick = () => switchPhase(key);
-    btn.id = "tab-" + key;
-    holder.appendChild(btn);
-  });
+function hasAny(text, words){
+  const t = text.toLowerCase();
+  return words.some(w => t.includes(w));
 }
 
-function switchPhase(key){
-  activePhase = key;
-  messages = [];
-  document.querySelectorAll(".phase-tab").forEach(el => el.classList.remove("active"));
-  document.getElementById("tab-" + key).classList.add("active");
+function countSignals(text){
+  const t = text.toLowerCase();
+  const groups = {
+    money: ["$", "revenue", "margin", "p&l", "cost", "savings", "budget", "financial", "business value", "roi"],
+    exec: ["c-suite", "ceo", "cfo", "cio", "cto", "svp", "vp", "executive", "board", "stakeholder", "director"],
+    transform: ["transformation", "change management", "adoption", "roadmap", "governance", "implementation", "operating model"],
+    tech: ["ai", "llm", "generative ai", "machine learning", "data", "analytics", "cloud", "software", "platform", "architecture"],
+    delivery: ["led", "delivered", "implemented", "managed", "facilitated", "designed", "built", "launched", "reduced", "increased"],
+    scale: ["global", "enterprise", "countries", "teams", "users", "agencies", "regional", "multi", "portfolio"],
+    consulting: ["client", "consulting", "advisory", "workshop", "discovery", "business case", "recommendations", "engagement"]
+  };
 
-  const phase = phases[key];
-  document.getElementById("phaseTitle").textContent = phase.title;
-  document.getElementById("phaseDescription").textContent = phase.description;
-
-  const quick = document.getElementById("quickPrompts");
-  quick.innerHTML = "";
-  phase.chips.forEach(chip => {
-    const b = document.createElement("button");
-    b.className = "chip";
-    b.textContent = chip;
-    b.onclick = () => {
-      document.getElementById("userInput").value = chip;
-      document.getElementById("userInput").focus();
-    };
-    quick.appendChild(b);
-  });
-
-  const win = document.getElementById("chatWindow");
-  win.innerHTML = "";
-  addMessage("agent", phase.opener);
+  const hits = {};
+  Object.keys(groups).forEach(k => hits[k] = hasAny(t, groups[k]));
+  const total = Object.values(hits).filter(Boolean).length;
+  return { hits, total };
 }
 
-function addMessage(role, content){
-  messages.push({ role, content });
-  const win = document.getElementById("chatWindow");
-  const msg = document.createElement("div");
-  msg.className = "msg " + role;
-  const bubble = document.createElement("div");
-  bubble.className = "bubble";
-  bubble.textContent = content;
-  msg.appendChild(bubble);
-  win.appendChild(msg);
-  win.scrollTop = win.scrollHeight;
+function scoreFrom(total, base=62, step=5){
+  return Math.min(96, base + total * step);
 }
 
-function buildContext(){
-  const candidateName = document.getElementById("candidateName").value.trim();
-  const targetRole = document.getElementById("targetRole").value.trim();
-  const compTarget = document.getElementById("compTarget").value.trim();
-
-  return [
-    candidateName ? "Candidate name: " + candidateName : "",
-    targetRole ? "Target role/market: " + targetRole : "",
-    compTarget ? "Compensation target: " + compTarget : ""
-  ].filter(Boolean).join("\\n");
+function tierFromScore(score){
+  if(score >= 90) return "DIR";
+  if(score >= 84) return "SM+";
+  if(score >= 76) return "MGR+";
+  if(score >= 68) return "MGR";
+  return "DEV";
 }
 
-async function sendMessage(event){
-  event.preventDefault();
-  const input = document.getElementById("userInput");
-  const text = input.value.trim();
-  if(!text) return;
-
-  if(WORKER_ENDPOINT.includes("YOUR-WORKER-NAME")){
-    addMessage("user", text);
-    addMessage("agent", "Setup needed: replace WORKER_ENDPOINT in this index.html with your deployed Cloudflare Worker URL. The UI is ready, but the secure proxy endpoint has not been configured yet.");
-    input.value = "";
-    return;
-  }
-
-  addMessage("user", text);
-  input.value = "";
-  setTyping(true);
-
-  try {
-    const context = buildContext();
-    const phase = phases[activePhase];
-    const conversation = messages
-      .filter(m => m.role === "user" || m.role === "agent")
-      .map(m => ({
-        role: m.role === "agent" ? "assistant" : "user",
-        content: m.content
-      }));
-
-    const payload = {
-      system: phase.system + (context ? "\\n\\nCandidate context:\\n" + context : ""),
-      messages: conversation.slice(-12),
-      phase: activePhase
-    };
-
-    const res = await fetch(WORKER_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-
-    if(!res.ok){
-      const errText = await res.text();
-      throw new Error(errText || "Worker request failed.");
-    }
-
-    const data = await res.json();
-    const reply = data.reply || data.content || "No reply returned.";
-    addMessage("agent", reply);
-    document.getElementById("statusLine").textContent = "Connected through secure Worker proxy. API key remains server-side.";
-  } catch (err) {
-    addMessage("agent", "Connection error: " + err.message + "\\n\\nCheck that your Worker is deployed, CORS is enabled, ANTHROPIC_API_KEY is set as a Worker secret, and WORKER_ENDPOINT matches the deployed Worker URL.");
-    document.getElementById("statusLine").textContent = "Connection failed. See the latest agent message for setup details.";
-  } finally {
-    setTyping(false);
-  }
+function compBand(score, target){
+  const t = target || "$120K+";
+  if(score >= 90) return "$150K–$185K";
+  if(score >= 84) return "$135K–$175K";
+  if(score >= 76) return "$120K–$155K";
+  return t;
 }
 
-function setTyping(show){
-  document.getElementById("typing").style.display = show ? "flex" : "none";
+function runAssessment(){
+  const name = val("candidateName") || "Candidate";
+  const role = val("targetRole") || "Target role not specified";
+  const comp = val("compTarget") || "$120K+";
+  const profile = val("profile");
+  const signal = val("roleSignal");
+  const tone = val("tone") || "Consulting partner review";
+  const combined = profile + " " + signal;
+  const sig = countSignals(combined);
+
+  const identity = scoreFrom(sig.total, 61, 5);
+  const stakeholder = scoreFrom(
+    [sig.hits.exec, sig.hits.consulting, sig.hits.scale, sig.hits.delivery].filter(Boolean).length,
+    63, 8
+  );
+  const transformation = scoreFrom(
+    [sig.hits.transform, sig.hits.tech, sig.hits.delivery, sig.hits.money].filter(Boolean).length,
+    64, 8
+  );
+  const readiness = Math.round((identity + stakeholder + transformation) / 3);
+  const confidence = Math.min(96, Math.round((readiness * .45) + (stakeholder * .25) + (transformation * .30)));
+  const tier = tierFromScore(readiness);
+  const band = compBand(readiness, comp);
+
+  const strengths = [];
+  if(sig.hits.tech) strengths.push("Strong technology and AI transformation signal.");
+  if(sig.hits.exec) strengths.push("Visible executive stakeholder and senior communication signal.");
+  if(sig.hits.money) strengths.push("Business-value language is present through cost, savings, risk, revenue, or P&L proof.");
+  if(sig.hits.transform) strengths.push("Transformation, adoption, governance, and change-readiness language supports consulting credibility.");
+  if(sig.hits.scale) strengths.push("Enterprise-scale experience helps the profile read above individual contributor level.");
+  if(sig.hits.consulting) strengths.push("Client advisory and workshop language aligns with consulting engagement leadership.");
+  if(!strengths.length) strengths.push("The profile has usable raw material, but needs stronger proof, scale, and business outcome language.");
+
+  const risks = [];
+  if(!sig.hits.money) risks.push("Compensation signal is under-supported without clearer financial, margin, savings, or ROI language.");
+  if(!sig.hits.exec) risks.push("Executive influence is not yet obvious enough for Manager/Senior Manager consulting evaluation.");
+  if(!sig.hits.consulting) risks.push("Consulting-firm fit may be questioned without clearer client advisory, discovery, workshop, or engagement leadership language.");
+  if(!sig.hits.scale) risks.push("Scale of responsibility needs to be more visible: users, teams, countries, revenue, budget, or portfolio scope.");
+  if(!sig.hits.transform) risks.push("Transformation leadership should be sharpened around adoption, governance, operating model, and implementation outcomes.");
+  if(!risks.length) risks.push("Primary risk is not capability. It is making the consulting leadership narrative unmistakable in the first 30 seconds.");
+
+  const narrative = `${name} presents as a ${tier === "DIR" ? "Director-caliber" : tier === "SM+" ? "Senior Manager-plus" : "Manager/Senior Manager-track"} transformation operator for ${role}. The profile is strongest where business ambiguity, AI or digital transformation, stakeholder alignment, and delivery execution intersect. For ${tone.toLowerCase()}, the candidate should be positioned less as a traditional project manager and more as an engagement leader who translates executive intent into roadmaps, operating models, implementation plans, and measurable outcomes.`;
+
+  const headline = `${role} | AI + Digital Transformation | Executive Roadmaps, Adoption Architecture, Business Value & Delivery Leadership`;
+
+  const actions = [
+    "Lead the resume and LinkedIn profile with transformation consulting identity, not tool fluency.",
+    "Move the strongest dollar, scale, and executive stakeholder proof into the top third of the resume.",
+    "Rewrite bullets around business challenge → intervention → measurable outcome.",
+    "Prepare a 90-second consulting narrative: problem definition, stakeholder alignment, roadmap, implementation, adoption.",
+    "Use outreach that frames peer-level value to partners and hiring managers instead of asking for consideration."
+  ];
+
+  const html = `
+    <div class="report-header">
+      <h4>EXECUTIVE TALENT ASSESSMENT</h4>
+      <p>${escapeHtml(name)} · ${escapeHtml(role)} · Lens: ${escapeHtml(tone)}</p>
+    </div>
+
+    <div class="score-grid">
+      ${metric("Identity Calibration Score", identity + "/100", "Senior identity coherence")}
+      ${metric("Market Positioning Tier", tier, tier === "DIR" ? "Director-caliber signal" : tier === "SM+" ? "Senior Manager-plus signal" : "Manager-track signal")}
+      ${metric("Compensation Alignment", band, "Target entered: " + escapeHtml(comp))}
+      ${metric("Stakeholder Influence", labelScore(stakeholder), stakeholder + "/100 executive trust signal")}
+      ${metric("Transformation Leadership", labelScore(transformation), transformation + "/100 change and delivery signal")}
+      ${metric("Executive Readiness Index", readiness + "/100", "Boardroom readiness")}
+      ${metric("Hiring Manager Confidence", confidence + "/100", "Decision confidence")}
+      ${metric("Assessment Status", confidence >= 84 ? "STRONG" : confidence >= 76 ? "VIABLE" : "NEEDS WORK", "Profile-to-role match")}
+    </div>
+
+    <div class="report-body">
+      <div class="report-block"><h5>Executive Narrative</h5><p>${escapeHtml(narrative)}</p></div>
+      <div class="report-block"><h5>Key Strengths</h5><ul>${strengths.map(s => `<li>${escapeHtml(s)}</li>`).join("")}</ul></div>
+      <div class="report-block"><h5>Positioning Risks</h5><ul>${risks.map(r => `<li>${escapeHtml(r)}</li>`).join("")}</ul></div>
+      <div class="report-block"><h5>Recommended Headline</h5><p>${escapeHtml(headline)}</p></div>
+      <div class="report-block"><h5>Top 5 Next Actions</h5><ul>${actions.map(a => `<li>${escapeHtml(a)}</li>`).join("")}</ul></div>
+      <div class="report-block"><h5>Peer-to-Peer Outreach Message</h5><p>Hi [Name] — I saw the work your team is doing around AI and digital transformation. My background sits at the intersection of executive discovery, AI adoption architecture, stakeholder alignment, and measurable delivery outcomes. I’m exploring Manager/Senior Manager-level consulting roles where that mix can help clients move from strategy to implementation. Would be glad to connect.</p></div>
+    </div>
+  `;
+
+  document.getElementById("report").innerHTML = html;
 }
 
-function clearChat(){
-  switchPhase(activePhase);
+function metric(label, value, note){
+  return `<div class="metric"><div class="metric-label">${escapeHtml(label)}</div><div class="metric-value">${escapeHtml(String(value))}</div><div class="metric-note">${escapeHtml(note)}</div></div>`;
 }
 
-init();
+function labelScore(score){
+  if(score >= 88) return "HIGH";
+  if(score >= 78) return "SOLID";
+  if(score >= 68) return "MIXED";
+  return "LOW";
+}
+
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, ch => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#039;"
+  }[ch]));
+}
+
+function copyReport(){
+  const text = document.getElementById("report").innerText;
+  navigator.clipboard.writeText(text).then(() => alert("Assessment copied."));
+}
+
+function resetAssessment(){
+  ["candidateName","targetRole","compTarget","profile","roleSignal"].forEach(id => document.getElementById(id).value = "");
+  document.getElementById("tone").selectedIndex = 0;
+  location.reload();
+}
+
+function loadSample(){
+  document.getElementById("candidateName").value = "Erwin Maurice McDonald";
+  document.getElementById("targetRole").value = "Manager / Senior Manager – AI & Digital Transformation Consulting";
+  document.getElementById("compTarget").value = "$125K–$175K";
+  document.getElementById("profile").value = "AI Architect, Change Management Lead, and Business Transformation Consultant with 10+ years advising enterprise organizations on AI strategy, adoption architecture, and change management. Proof includes $1.2M cost savings, 18% clinical readmission reduction, $2M+ enterprise migration across 15 countries, executive stakeholder advisory, AI governance, LLM orchestration, healthcare, global media, financial services, and technology transformation.";
+  document.getElementById("roleSignal").value = "Dallas-based consulting firm seeking Managers and Senior Managers to lead client engagements from problem definition through solution delivery. Role requires executive workshops, stakeholder alignment, AI-powered solutions, management consulting, software development, data analytics, artificial intelligence transformation, business cases, operating models, engagement governance, delivery leadership, client relationship management, and practice development.";
+  runAssessment();
+}
 </script>
 
 </body>
