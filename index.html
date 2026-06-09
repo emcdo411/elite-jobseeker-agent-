@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Stop applying blind. Start operating with signal, positioning, and market intelligence." />
+<meta name="description" content="Elite Jobseeker Agent is a money-green career intelligence operating system with an embedded AI agent for senior jobseekers." />
 <meta property="og:title" content="Elite Jobseeker Agent | Career Intelligence OS" />
-<meta property="og:description" content="A self-contained career intelligence tool for senior professionals targeting $120K+ opportunities." />
+<meta property="og:description" content="Stop applying blind. Start operating with signal, positioning, and market intelligence." />
 <meta property="og:type" content="website" />
 <meta name="theme-color" content="#001f12" />
 <title>Elite Jobseeker Agent | Career Intelligence OS</title>
@@ -21,7 +21,6 @@
     --black: #000000;
     --ink: #030604;
     --ink-mid: #07140d;
-    --ink-light: #0b2015;
     --green: #00ff88;
     --green-lt: #a4ffd0;
     --green-mid: #12c878;
@@ -31,14 +30,10 @@
     --gold: #d7b65f;
     --gold-dim: rgba(215,182,95,0.12);
     --gold-bdr: rgba(215,182,95,0.28);
-    --surface: #f5fff9;
-    --surface-2: #e9fff2;
-    --border: rgba(0,255,136,0.18);
     --white-bdr: rgba(255,255,255,0.16);
     --text-primary: #f4fff8;
     --text-secondary: #b9d7c5;
     --text-muted: #7ea58e;
-    --dark-text: #07140d;
     --mono: 'JetBrains Mono', monospace;
     --sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --display: 'Anton', Impact, 'Arial Black', sans-serif;
@@ -121,11 +116,7 @@
     border-radius:8px;
   }
 
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.35rem;
-  }
+  .nav-links { display: flex; align-items: center; gap: 1.35rem; }
 
   .nav-links a {
     font-size: 12px;
@@ -146,11 +137,7 @@
     box-shadow: 0 0 30px rgba(0,255,136,.22);
   }
 
-  .hero {
-    padding: 96px 0 58px;
-    position: relative;
-    overflow: hidden;
-  }
+  .hero { padding: 96px 0 58px; position: relative; overflow: hidden; }
 
   .hero-grid {
     display: grid;
@@ -308,6 +295,7 @@
     text-transform:uppercase;
     letter-spacing:.005em;
   }
+
   .product-name span { display:block; color: var(--green); }
 
   .formula-strip {
@@ -451,8 +439,6 @@
     border-radius: 26px;
     padding: 26px;
     transition: border-color .15s, transform .15s, box-shadow .15s;
-    position: relative;
-    overflow: hidden;
     min-height: 270px;
   }
 
@@ -528,22 +514,71 @@
     font-weight: 540;
   }
 
-  .agent-grid {
+  .phase-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 18px 26px;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+    background: rgba(0,0,0,.16);
+  }
+
+  .phase-tab {
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.055);
+    color: var(--text-secondary);
+    padding: 9px 12px;
+    border-radius: 999px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .phase-tab.active {
+    border-color: var(--green-bdr);
+    background: var(--green-dim);
+    color: var(--green-lt);
+  }
+
+  .chat-wrap {
     display:grid;
-    grid-template-columns: .92fr 1.08fr;
-    gap: 0;
+    grid-template-columns: .76fr 1.24fr;
+    min-height: 670px;
   }
 
-  .agent-inputs, .agent-output {
-    padding: 28px;
-  }
-
-  .agent-inputs {
+  .chat-side {
+    padding: 24px;
     border-right: 1px solid rgba(255,255,255,.14);
     background: rgba(0,0,0,.18);
   }
 
-  .field { margin-bottom: 16px; }
+  .chat-side h4 {
+    font-family: var(--display);
+    font-size: 2.05rem;
+    line-height: .92;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .chat-side p {
+    color: var(--text-secondary);
+    line-height: 1.62;
+    font-size: .92rem;
+    margin-bottom: 18px;
+  }
+
+  .config-box {
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:20px;
+    padding:16px;
+    background:rgba(0,0,0,.22);
+    margin-bottom: 18px;
+  }
+
+  .field { margin-bottom: 14px; }
   .field label {
     display:block;
     font-family: var(--mono);
@@ -554,48 +589,124 @@
     margin-bottom: 8px;
   }
 
-  .field input, .field textarea, .field select {
+  .field input {
     width:100%;
     border:1px solid rgba(255,255,255,.15);
     background: rgba(0,0,0,.34);
     color: #fff;
     border-radius: 14px;
-    padding: 13px 14px;
+    padding: 12px 13px;
     outline: none;
   }
 
-  .field textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
-  .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--green-bdr); box-shadow: 0 0 0 3px rgba(0,255,136,.08); }
+  .field input:focus { border-color: var(--green-bdr); box-shadow: 0 0 0 3px rgba(0,255,136,.08); }
 
-  .agent-actions {
+  .quick-prompts {
     display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top: 18px;
+    flex-direction:column;
+    gap:9px;
   }
 
-  .output-card {
+  .chip {
+    border:1px solid rgba(255,255,255,.13);
+    background:rgba(255,255,255,.055);
+    color:#dfffea;
+    padding:11px 12px;
+    border-radius:14px;
+    text-align:left;
+    cursor:pointer;
+    font-size:.82rem;
+    line-height:1.35;
+  }
+
+  .chip:hover { border-color: var(--green-bdr); color: var(--green-lt); }
+
+  .chat-main {
+    padding: 24px;
+    display:flex;
+    flex-direction:column;
+    min-height: 670px;
+  }
+
+  .chat-window {
+    flex: 1;
+    overflow-y: auto;
     border:1px solid rgba(255,255,255,.14);
     background: rgba(0,0,0,.25);
     border-radius: 24px;
-    padding: 20px;
-    min-height: 540px;
+    padding: 18px;
+    min-height: 470px;
+    max-height: 540px;
   }
 
-  .output-card pre {
-    white-space: pre-wrap;
-    word-break: break-word;
-    color: #eafff3;
-    font-size: .88rem;
-    line-height: 1.62;
+  .msg {
+    display:flex;
+    margin-bottom: 14px;
+  }
+
+  .msg.user { justify-content:flex-end; }
+
+  .bubble {
+    max-width: 82%;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius: 18px;
+    padding: 14px 15px;
+    color:#ecfff4;
+    line-height:1.58;
+    font-size:.93rem;
+    white-space:pre-wrap;
+  }
+
+  .msg.agent .bubble { background: rgba(0,255,136,.075); border-color: var(--green-bdr); }
+  .msg.user .bubble { background: rgba(255,255,255,.075); }
+
+  .typing {
+    display:none;
+    gap: 5px;
+    align-items:center;
+    color: var(--green-lt);
     font-family: var(--mono);
+    font-size: 11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin: 12px 0;
   }
 
-  .small-note {
+  .typing span {
+    width:6px;height:6px;border-radius:50%;
+    background:var(--green);
+    animation: bounce 1s infinite ease-in-out;
+  }
+  .typing span:nth-child(2){animation-delay:.12s}
+  .typing span:nth-child(3){animation-delay:.24s}
+  @keyframes bounce { 0%,80%,100%{transform:translateY(0);opacity:.45} 40%{transform:translateY(-5px);opacity:1} }
+
+  .chat-form {
+    display:flex;
+    gap:10px;
+    margin-top: 14px;
+  }
+
+  .chat-form textarea {
+    flex:1;
+    min-height: 64px;
+    resize: vertical;
+    border:1px solid rgba(255,255,255,.15);
+    background: rgba(0,0,0,.34);
+    color:#fff;
+    border-radius:18px;
+    padding:14px;
+    outline:none;
+    line-height:1.45;
+  }
+
+  .chat-form textarea:focus { border-color: var(--green-bdr); box-shadow: 0 0 0 3px rgba(0,255,136,.08); }
+
+  .status-line {
     font-size: .78rem;
     color: var(--text-muted);
     line-height: 1.5;
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   .signal-list {
@@ -631,11 +742,7 @@
     font-weight: 540;
   }
 
-  .upgrade-grid {
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:16px;
-  }
+  .upgrade-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:16px; }
 
   .upgrade-card {
     background:rgba(255,255,255,.06);
@@ -654,6 +761,7 @@
     color: var(--green-lt);
   }
   .upgrade-card.gold .upgrade-card-label { color: var(--gold); }
+
   .upgrade-card-text {
     color: var(--text-secondary);
     font-size: .95rem;
@@ -704,8 +812,8 @@
   footer a { color: var(--green-lt); }
 
   @media (max-width: 980px) {
-    .hero-grid, .agent-grid { grid-template-columns: 1fr; }
-    .agent-inputs { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+    .hero-grid, .chat-wrap { grid-template-columns: 1fr; }
+    .chat-side { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.14); }
     .phase-grid { grid-template-columns: 1fr 1fr; }
     .hero-stats { grid-template-columns: 1fr 1fr; }
   }
@@ -716,6 +824,8 @@
     .phase-grid, .signal-list, .upgrade-grid, .hero-stats { grid-template-columns: 1fr; }
     .section-head { grid-template-columns: 1fr; gap: 14px; }
     .hero-title { font-size: clamp(4rem, 18vw, 7.2rem); }
+    .chat-form { flex-direction: column; }
+    .bubble { max-width: 94%; }
   }
 </style>
 </head>
@@ -743,7 +853,7 @@
       <h1 class="hero-title">ELITE JOBSEEKER AGENT</h1>
       <p class="hero-sub">
         <b>Stop applying blind. Start operating with signal.</b>
-        A self-contained career intelligence tool for experienced professionals who need market intelligence,
+        A money-green AI career intelligence system for experienced professionals who need market intelligence,
         recruiter signal decoding, compensation targeting, and executive positioning in one workflow.
       </p>
       <div class="hero-actions">
@@ -783,7 +893,7 @@
           <div class="nutri-row"><span>Hidden Role Detection</span><span>High</span></div>
           <div class="nutri-row"><span>Recruiter Signal Parsing</span><span>Active</span></div>
           <div class="nutri-row"><span>Executive Narrative Fit</span><span>Built-In</span></div>
-          <div class="nutri-row"><span>External AI model Links</span><span>None</span></div>
+          <div class="nutri-row"><span>API Key Exposure</span><span>Zero</span></div>
         </div>
       </div>
     </aside>
@@ -804,12 +914,12 @@
     </div>
 
     <div class="phase-grid">
-      <div class="phase-card"><div class="phase-num">PHASE 0</div><div class="phase-title">Identity Calibration Intake</div><div class="phase-body">Paste your resume, LinkedIn summary, and target role. The tool builds a Candidate Intelligence Brief covering market tier, signal strength, gaps, and positioning strategy.</div></div>
+      <div class="phase-card"><div class="phase-num">PHASE 0</div><div class="phase-title">Identity Calibration Intake</div><div class="phase-body">Builds a Candidate Intelligence Brief covering market tier, signal strength, gaps, and positioning strategy.</div></div>
       <div class="phase-card"><div class="phase-num">PHASE 1</div><div class="phase-title">Profile Dominance</div><div class="phase-body">LinkedIn and resume positioning logic designed for passive inbound, retained search visibility, and executive-level signal quality.</div></div>
       <div class="phase-card"><div class="phase-num">PHASE 2</div><div class="phase-title">Target Acquisition</div><div class="phase-body">A disciplined filtering layer for $120K+ roles: urgency, title fit, company maturity, compensation clues, and direct hiring-manager potential.</div></div>
-      <div class="phase-card"><div class="phase-num">PHASE 3</div><div class="phase-title">ATS + Executive Tailoring</div><div class="phase-body">Generates a role-specific positioning brief for two audiences at once: the ATS screen and the decision-maker reading for credibility.</div></div>
-      <div class="phase-card"><div class="phase-num">PHASE 4</div><div class="phase-title">Network Activation</div><div class="phase-body">Builds peer-to-peer outreach that reads like a senior operator reaching out to another professional, not a desperate job seeker asking for help.</div></div>
-      <div class="phase-card" style="border-color: var(--gold-bdr);"><div class="phase-num" style="background:var(--gold-dim);color:var(--gold);border-color:var(--gold-bdr);">MASTER</div><div class="phase-title">Single Page Deployment</div><div class="phase-body">The tool runs inside this index file. No AI model artifact link, no extra page jump, and no dependency on a hidden external agent file.</div></div>
+      <div class="phase-card"><div class="phase-num">PHASE 3</div><div class="phase-title">ATS + Executive Tailoring</div><div class="phase-body">Generates role-specific positioning for two audiences at once: the ATS screen and the decision-maker reading for credibility.</div></div>
+      <div class="phase-card"><div class="phase-num">PHASE 4</div><div class="phase-title">Network Activation</div><div class="phase-body">Builds peer-to-peer outreach that reads like a senior operator reaching out to another professional.</div></div>
+      <div class="phase-card" style="border-color: var(--gold-bdr);"><div class="phase-num" style="background:var(--gold-dim);color:var(--gold);border-color:var(--gold-bdr);">SECURE</div><div class="phase-title">Proxy-Based AI</div><div class="phase-body">The page calls your Cloudflare Worker endpoint. The Worker calls Anthropic securely. Your API key never appears in GitHub Pages.</div></div>
     </div>
   </div>
 </section>
@@ -817,12 +927,12 @@
 <section id="agent-tool">
   <div class="shell">
     <div class="section-head">
-      <div class="section-eyebrow">02 // Embedded Tool</div>
+      <div class="section-eyebrow">02 // Embedded Live Agent</div>
       <div>
         <h2 class="section-title">RUN THE AGENT WITHOUT LEAVING THE PAGE.</h2>
         <p class="section-sub">
-          Paste your resume/profile details and the tool generates a structured Candidate Intelligence Brief, role-fit logic,
-          outreach language, and a reusable master prompt. Everything runs client-side in the browser.
+          This chat UI stays inside the index page. It sends requests to your Cloudflare Worker proxy, which securely talks to Anthropic.
+          Replace the endpoint constant in the script with your deployed Worker URL.
         </p>
       </div>
     </div>
@@ -831,70 +941,53 @@
       <div class="agent-top">
         <div>
           <h3>AGENT CONSOLE</h3>
-          <p>This is a self-contained front-end tool. It does not send data anywhere. The embedded console generates a structured brief and reusable master prompt without sending users to another page.</p>
+          <p>Six modes. Phase-specific system prompts. Session memory. Quick-start chips. No redirect. No public API key.</p>
         </div>
         <div class="hero-actions">
-          <button class="btn-primary" onclick="runAgent()">Generate Brief</button>
-          <button class="btn-secondary" onclick="copyOutput()">Copy Output</button>
-          <button class="btn-ghost" onclick="clearAgent()">Reset</button>
+          <button class="btn-secondary" onclick="clearChat()">Clear Chat</button>
+          <a class="btn-ghost" href="https://github.com/emcdo411/elite-jobseeker-agent" target="_blank" rel="noopener">Repo</a>
         </div>
       </div>
 
-      <div class="agent-grid">
-        <div class="agent-inputs">
-          <div class="field">
-            <label for="name">Candidate Name</label>
-            <input id="name" placeholder="Example: Erwin Maurice McDonald" />
+      <div class="phase-tabs" id="phaseTabs"></div>
+
+      <div class="chat-wrap">
+        <aside class="chat-side">
+          <h4 id="phaseTitle">General Agent</h4>
+          <p id="phaseDescription">Use this mode for general career intelligence, role targeting, and market positioning.</p>
+
+          <div class="config-box">
+            <div class="field">
+              <label for="candidateName">Candidate Name</label>
+              <input id="candidateName" placeholder="Example: Erwin Maurice McDonald" />
+            </div>
+            <div class="field">
+              <label for="targetRole">Target Role / Market</label>
+              <input id="targetRole" placeholder="Example: AI Business Analyst, Infrastructure AI, Director-Level Role" />
+            </div>
+            <div class="field">
+              <label for="compTarget">Compensation Target</label>
+              <input id="compTarget" placeholder="Example: $120K–$165K" />
+            </div>
           </div>
 
-          <div class="field">
-            <label for="target">Target Role / Level</label>
-            <input id="target" placeholder="Example: Director AI Business Analyst, Infrastructure AI, Applied AI Analyst" />
+          <p style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:var(--green-lt);margin-bottom:10px;">Quick Starts</p>
+          <div class="quick-prompts" id="quickPrompts"></div>
+        </aside>
+
+        <main class="chat-main">
+          <div class="chat-window" id="chatWindow"></div>
+          <div class="typing" id="typing"><span></span><span></span><span></span> Agent thinking</div>
+
+          <form class="chat-form" onsubmit="sendMessage(event)">
+            <textarea id="userInput" placeholder="Paste your resume, LinkedIn summary, job description, recruiter message, or ask the agent what to do next..."></textarea>
+            <button class="btn-primary" type="submit">Send →</button>
+          </form>
+
+          <div class="status-line" id="statusLine">
+            Setup required: deploy the included Cloudflare Worker, add your Anthropic key as a Worker secret, then paste the Worker URL into WORKER_ENDPOINT.
           </div>
-
-          <div class="field">
-            <label for="comp">Target Compensation</label>
-            <input id="comp" placeholder="Example: $120K–$165K base / senior IC to director range" />
-          </div>
-
-          <div class="field">
-            <label for="resume">Resume / Experience Snapshot</label>
-            <textarea id="resume" placeholder="Paste resume highlights, LinkedIn summary, major roles, tools, industries, outcomes, and proof points."></textarea>
-          </div>
-
-          <div class="field">
-            <label for="job">Target Job Description or Market Signal</label>
-            <textarea id="job" placeholder="Paste a job description, recruiter note, company target, or market signal you want to evaluate."></textarea>
-          </div>
-
-          <div class="field">
-            <label for="tone">Positioning Tone</label>
-            <select id="tone">
-              <option>Executive operator</option>
-              <option>Technical business analyst</option>
-              <option>AI solutions architect</option>
-              <option>Infrastructure-focused strategist</option>
-              <option>Founder-grade builder</option>
-            </select>
-          </div>
-
-          <div class="agent-actions">
-            <button class="btn-primary" onclick="runAgent()">Generate Brief</button>
-            <button class="btn-secondary" onclick="copyPrompt()">Copy Master Prompt</button>
-          </div>
-
-          <p class="small-note">
-            Privacy note: this page uses browser-side JavaScript only. Nothing is transmitted unless you manually copy/paste it elsewhere.
-          </p>
-        </div>
-
-        <div class="agent-output">
-          <div class="output-card">
-            <pre id="output">Your Candidate Intelligence Brief will appear here.
-
-Start by pasting a resume/profile snapshot and a target role or job description, then click “Generate Brief.”</pre>
-          </div>
-        </div>
+        </main>
       </div>
     </div>
   </div>
@@ -950,8 +1043,8 @@ Start by pasting a resume/profile snapshot and a target role or job description,
         <div class="upgrade-card-text">The higher the compensation, the more hiring depends on trust, perceived judgment, scope, network signal, and market timing.</div>
       </div>
       <div class="upgrade-card gold">
-        <div class="upgrade-card-label">Agent Behavior</div>
-        <div class="upgrade-card-text">The embedded console turns raw career material into a structured brief, role fit logic, and reusable AI prompt without sending users away.</div>
+        <div class="upgrade-card-label">Secure Deployment</div>
+        <div class="upgrade-card-text">GitHub Pages handles the front end. Cloudflare Worker handles the API secret. The audience stays inside the index page.</div>
       </div>
     </div>
   </div>
@@ -982,162 +1075,234 @@ Start by pasting a resume/profile snapshot and a target role or job description,
 </footer>
 
 <script>
-function val(id){
-  return (document.getElementById(id).value || "").trim();
+/*
+  IMPORTANT:
+  1. Deploy the included cloudflare-worker.js.
+  2. Add ANTHROPIC_API_KEY as a Worker secret.
+  3. Replace the URL below with your Worker URL.
+*/
+const WORKER_ENDPOINT = "https://YOUR-WORKER-NAME.YOUR-SUBDOMAIN.workers.dev";
+
+const phases = {
+  general: {
+    label: "General",
+    title: "General Agent",
+    description: "General career intelligence, role targeting, compensation framing, and market positioning.",
+    opener: "I’m ready. Send me your resume/profile material, target role, recruiter message, or job description. I’ll help turn it into a sharper career intelligence brief.",
+    chips: [
+      "Build my Candidate Intelligence Brief.",
+      "Evaluate this job description against my background.",
+      "Rewrite my positioning for a $120K+ opportunity.",
+      "Create a peer-to-peer recruiter outreach message."
+    ],
+    system: "You are Elite Jobseeker Agent, a direct but supportive career intelligence system for senior professionals targeting $120K+ roles. Prioritize market signal, compensation alignment, executive positioning, recruiter psychology, business impact, and practical next actions. Do not flatter. Be specific."
+  },
+  phase0: {
+    label: "Phase 0",
+    title: "Phase 0 // Identity Calibration",
+    description: "Builds the Candidate Intelligence Brief before touching any role.",
+    opener: "Phase 0 loaded. Paste your resume, LinkedIn summary, and target compensation. I’ll calibrate your identity, seniority level, market fit, and positioning gaps.",
+    chips: [
+      "Run Phase 0 on my resume/profile.",
+      "What level am I really signaling?",
+      "Find my strongest executive positioning angle.",
+      "Identify gaps that make me look under-leveled."
+    ],
+    system: "You are running Phase 0: Identity Calibration for Elite Jobseeker Agent. Analyze the candidate before the job description. Produce a Candidate Intelligence Brief with seniority signal, compensation fit, market tier, credibility signals, under-leveling risks, positioning gaps, and next actions. Be rigorous."
+  },
+  phase1: {
+    label: "Phase 1",
+    title: "Phase 1 // Profile Dominance",
+    description: "LinkedIn and resume presence built for passive inbound and executive search signal.",
+    opener: "Phase 1 loaded. Send me your headline, About section, resume summary, or LinkedIn text. I’ll rebuild it for stronger senior-market signal.",
+    chips: [
+      "Rewrite my LinkedIn headline.",
+      "Rewrite my About section for executive search.",
+      "Turn this resume summary into senior-level positioning.",
+      "Find weak language in my profile."
+    ],
+    system: "You are running Phase 1: Profile Dominance. Rewrite and critique LinkedIn/resume positioning for passive recruiter inbound and senior professional credibility. Emphasize business outcomes, P&L, stakeholder translation, scale, technical fluency, and market fit."
+  },
+  phase2: {
+    label: "Phase 2",
+    title: "Phase 2 // Target Acquisition",
+    description: "Role filtering, company signal, compensation fit, and external-hire viability.",
+    opener: "Phase 2 loaded. Paste a job post, company target, recruiter note, or list of roles. I’ll score which ones deserve action.",
+    chips: [
+      "Score this role for fit and compensation.",
+      "Is this role worth applying to?",
+      "Find red flags in this job description.",
+      "Build my target-company logic."
+    ],
+    system: "You are running Phase 2: Target Acquisition. Score roles for seniority fit, compensation alignment, external-hire viability, company maturity, urgency, recruiter language, hidden red flags, and direct outreach potential. Return clear go/no-go guidance."
+  },
+  phase3: {
+    label: "Phase 3",
+    title: "Phase 3 // ATS + Executive Tailoring",
+    description: "Tailors for both ATS keyword match and hiring-manager confidence.",
+    opener: "Phase 3 loaded. Paste a job description and your resume bullets. I’ll create ATS keywords, executive framing, and a tailored submission strategy.",
+    chips: [
+      "Tailor my resume to this job.",
+      "Extract ATS keywords from this description.",
+      "Rewrite these bullets with executive impact.",
+      "Create a hiring-manager confidence brief."
+    ],
+    system: "You are running Phase 3: ATS Penetration + Executive Tailoring. Build two layers: ATS keyword alignment and executive decision-maker confidence. Rewrite bullets with quantified impact, business context, and credible scope. Explain what to change and why."
+  },
+  phase4: {
+    label: "Phase 4",
+    title: "Phase 4 // Network Activation",
+    description: "Peer-to-peer outreach, warm intros, recruiter notes, and decision-maker messaging.",
+    opener: "Phase 4 loaded. Give me a company, role, contact, or LinkedIn context. I’ll build concise outreach that sounds like a senior operator, not a desperate applicant.",
+    chips: [
+      "Write a peer-to-peer outreach note.",
+      "Write a recruiter follow-up.",
+      "Create a hiring manager DM.",
+      "Turn this connection into a warm intro."
+    ],
+    system: "You are running Phase 4: Network Activation. Create concise, credible outreach under 90 words unless asked otherwise. The voice should be senior, peer-to-peer, specific, warm, and non-needy. Use business signal, not generic networking language."
+  }
+};
+
+let activePhase = "general";
+let messages = [];
+
+function init(){
+  renderTabs();
+  switchPhase("general");
 }
 
-function qualityScore(text){
-  const t = (text || "").toLowerCase();
-  const checks = [
-    /\$|revenue|margin|p&l|cost|savings|budget|risk/.test(t),
-    /stakeholder|executive|leadership|cross-functional|board|c-suite|vp|director/.test(t),
-    /ai|analytics|data|cloud|infrastructure|automation|llm|agent|api|sql|python|power bi|tableau/.test(t),
-    /implemented|built|led|delivered|migrated|improved|reduced|increased|launched/.test(t),
-    /\d/.test(t)
-  ];
-  return checks.filter(Boolean).length;
-}
-
-function runAgent(){
-  const name = val("name") || "Candidate";
-  const target = val("target") || "Target role not specified";
-  const comp = val("comp") || "$120K+ target range";
-  const resume = val("resume");
-  const job = val("job");
-  const tone = val("tone") || "Executive operator";
-  const combined = resume + " " + job;
-  const score = qualityScore(combined);
-
-  const signalLevel = score >= 5 ? "STRONG" : score >= 3 ? "DEVELOPING" : "UNDER-SPECIFIED";
-  const riskLevel = score >= 5 ? "Low narrative risk" : score >= 3 ? "Moderate narrative risk" : "High narrative risk";
-
-  const missing = [];
-  if(!/\$|revenue|margin|p&l|cost|savings|budget|risk/i.test(combined)) missing.push("Add money language: revenue, margin, cost, risk, budget, savings, or P&L.");
-  if(!/stakeholder|executive|leadership|cross-functional|board|c-suite|vp|director/i.test(combined)) missing.push("Add stakeholder scope: executives, cross-functional teams, leadership cadence, or decision forums.");
-  if(!/ai|analytics|data|cloud|infrastructure|automation|llm|agent|api|sql|python|power bi|tableau/i.test(combined)) missing.push("Add technical/business translation signals: AI, analytics, cloud, infrastructure, automation, data, tools, or systems.");
-  if(!/implemented|built|led|delivered|migrated|improved|reduced|increased|launched/i.test(combined)) missing.push("Add action verbs tied to outcomes: built, led, delivered, improved, reduced, migrated, launched.");
-  if(!/\d/.test(combined)) missing.push("Add numbers: team size, revenue, cost, project scale, timeline, percentage improvement, or compensation target.");
-
-  const output = `ELITE JOBSEEKER AGENT // CANDIDATE INTELLIGENCE BRIEF
-
-Candidate:
-${name}
-
-Target:
-${target}
-
-Compensation Target:
-${comp}
-
-Positioning Tone:
-${tone}
-
-SIGNAL SCORE:
-${score}/5 · ${signalLevel}
-
-NARRATIVE RISK:
-${riskLevel}
-
-PHASE 0 // IDENTITY CALIBRATION
-Your current material should be framed as a senior operator narrative, not a task-history narrative. The strongest positioning angle is:
-
-"${name} operates at the intersection of business translation, technical execution, stakeholder alignment, and measurable operating impact."
-
-PHASE 1 // PROFILE DOMINANCE
-Recommended headline direction:
-${target} | AI + Data + Infrastructure Translation | Business Outcomes, Risk, Margin, and Execution Readiness
-
-Recommended summary angle:
-Lead with business problem recognition, then prove technical fluency. Do not open with a tool list. Open with the market pain you solve.
-
-PHASE 2 // TARGET ACQUISITION
-Prioritize roles where the company shows at least two of these signals:
-- AI, automation, analytics, cloud, or infrastructure transformation
-- Business analyst / solution architect / technical program hybrid needs
-- Growth, modernization, cost-control, or operational-risk language
-- A hiring manager likely struggling to translate between business and technical teams
-- Compensation range aligned with ${comp}
-
-PHASE 3 // ATS + EXECUTIVE TAILORING
-For every target role, build two layers:
-1. ATS Layer: exact keywords from the job description.
-2. Executive Layer: proof of judgment, scope, financial awareness, stakeholder translation, and operational credibility.
-
-PHASE 4 // NETWORK ACTIVATION
-Peer-to-peer outreach draft:
-"Hi [Name] — I saw the work your team is doing around [specific company initiative]. My background sits at the intersection of AI/data translation, business analysis, and enterprise execution. I’m exploring roles where that mix can help teams move from strategy to implementation. Would be glad to connect."
-
-POSITIONING GAPS TO FIX:
-${missing.length ? missing.map(x => "- " + x).join("\n") : "- No major signal gaps detected from the supplied material. Tighten proof points and tailor to each role."}
-
-HIRING MANAGER CONFIDENCE NOTE:
-A hiring manager needs to see that you can reduce ambiguity, translate across teams, and connect technical work to business impact. Your next edit should make those three signals impossible to miss.
-
-MASTER PROMPT FOR AI MODEL:
-${buildPrompt(false)}
-`;
-
-  document.getElementById("output").textContent = output;
-}
-
-function buildPrompt(includeInputs=true){
-  const name = val("name") || "Candidate";
-  const target = val("target") || "Target role not specified";
-  const comp = val("comp") || "$120K+ target range";
-  const resume = val("resume") || "[Paste resume/profile material here]";
-  const job = val("job") || "[Paste target role, company, recruiter note, or job description here]";
-  const tone = val("tone") || "Executive operator";
-
-  return `Act as Elite Jobseeker Agent, a Director-level career intelligence system.
-
-Candidate: ${name}
-Target Role / Level: ${target}
-Compensation Target: ${comp}
-Positioning Tone: ${tone}
-
-Resume / Profile Material:
-${resume}
-
-Target Job / Market Signal:
-${job}
-
-Build a Candidate Intelligence Brief with:
-1. Identity calibration
-2. Seniority and compensation fit
-3. Market signal interpretation
-4. ATS keyword layer
-5. Executive narrative layer
-6. Hiring manager confidence score
-7. Positioning gaps
-8. Resume headline and summary rewrite
-9. Peer-to-peer outreach message
-10. Top 5 next actions
-
-Be direct. Do not flatter. Prioritize signal, credibility, compensation alignment, and executive positioning.`;
-}
-
-function copyPrompt(){
-  navigator.clipboard.writeText(buildPrompt()).then(() => {
-    alert("Master prompt copied.");
-  }).catch(() => {
-    document.getElementById("output").textContent = buildPrompt();
+function renderTabs(){
+  const holder = document.getElementById("phaseTabs");
+  holder.innerHTML = "";
+  Object.entries(phases).forEach(([key, phase]) => {
+    const btn = document.createElement("button");
+    btn.className = "phase-tab";
+    btn.textContent = phase.label;
+    btn.onclick = () => switchPhase(key);
+    btn.id = "tab-" + key;
+    holder.appendChild(btn);
   });
 }
 
-function copyOutput(){
-  const text = document.getElementById("output").textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    alert("Output copied.");
-  }).catch(() => {
-    alert("Copy failed. Select the output text manually.");
+function switchPhase(key){
+  activePhase = key;
+  messages = [];
+  document.querySelectorAll(".phase-tab").forEach(el => el.classList.remove("active"));
+  document.getElementById("tab-" + key).classList.add("active");
+
+  const phase = phases[key];
+  document.getElementById("phaseTitle").textContent = phase.title;
+  document.getElementById("phaseDescription").textContent = phase.description;
+
+  const quick = document.getElementById("quickPrompts");
+  quick.innerHTML = "";
+  phase.chips.forEach(chip => {
+    const b = document.createElement("button");
+    b.className = "chip";
+    b.textContent = chip;
+    b.onclick = () => {
+      document.getElementById("userInput").value = chip;
+      document.getElementById("userInput").focus();
+    };
+    quick.appendChild(b);
   });
+
+  const win = document.getElementById("chatWindow");
+  win.innerHTML = "";
+  addMessage("agent", phase.opener);
 }
 
-function clearAgent(){
-  ["name","target","comp","resume","job"].forEach(id => document.getElementById(id).value = "");
-  document.getElementById("tone").selectedIndex = 0;
-  document.getElementById("output").textContent = "Your Candidate Intelligence Brief will appear here.\\n\\nStart by pasting a resume/profile snapshot and a target role or job description, then click “Generate Brief.”";
+function addMessage(role, content){
+  messages.push({ role, content });
+  const win = document.getElementById("chatWindow");
+  const msg = document.createElement("div");
+  msg.className = "msg " + role;
+  const bubble = document.createElement("div");
+  bubble.className = "bubble";
+  bubble.textContent = content;
+  msg.appendChild(bubble);
+  win.appendChild(msg);
+  win.scrollTop = win.scrollHeight;
 }
+
+function buildContext(){
+  const candidateName = document.getElementById("candidateName").value.trim();
+  const targetRole = document.getElementById("targetRole").value.trim();
+  const compTarget = document.getElementById("compTarget").value.trim();
+
+  return [
+    candidateName ? "Candidate name: " + candidateName : "",
+    targetRole ? "Target role/market: " + targetRole : "",
+    compTarget ? "Compensation target: " + compTarget : ""
+  ].filter(Boolean).join("\\n");
+}
+
+async function sendMessage(event){
+  event.preventDefault();
+  const input = document.getElementById("userInput");
+  const text = input.value.trim();
+  if(!text) return;
+
+  if(WORKER_ENDPOINT.includes("YOUR-WORKER-NAME")){
+    addMessage("user", text);
+    addMessage("agent", "Setup needed: replace WORKER_ENDPOINT in this index.html with your deployed Cloudflare Worker URL. The UI is ready, but the secure proxy endpoint has not been configured yet.");
+    input.value = "";
+    return;
+  }
+
+  addMessage("user", text);
+  input.value = "";
+  setTyping(true);
+
+  try {
+    const context = buildContext();
+    const phase = phases[activePhase];
+    const conversation = messages
+      .filter(m => m.role === "user" || m.role === "agent")
+      .map(m => ({
+        role: m.role === "agent" ? "assistant" : "user",
+        content: m.content
+      }));
+
+    const payload = {
+      system: phase.system + (context ? "\\n\\nCandidate context:\\n" + context : ""),
+      messages: conversation.slice(-12),
+      phase: activePhase
+    };
+
+    const res = await fetch(WORKER_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    if(!res.ok){
+      const errText = await res.text();
+      throw new Error(errText || "Worker request failed.");
+    }
+
+    const data = await res.json();
+    const reply = data.reply || data.content || "No reply returned.";
+    addMessage("agent", reply);
+    document.getElementById("statusLine").textContent = "Connected through secure Worker proxy. API key remains server-side.";
+  } catch (err) {
+    addMessage("agent", "Connection error: " + err.message + "\\n\\nCheck that your Worker is deployed, CORS is enabled, ANTHROPIC_API_KEY is set as a Worker secret, and WORKER_ENDPOINT matches the deployed Worker URL.");
+    document.getElementById("statusLine").textContent = "Connection failed. See the latest agent message for setup details.";
+  } finally {
+    setTyping(false);
+  }
+}
+
+function setTyping(show){
+  document.getElementById("typing").style.display = show ? "flex" : "none";
+}
+
+function clearChat(){
+  switchPhase(activePhase);
+}
+
+init();
 </script>
 
 </body>
