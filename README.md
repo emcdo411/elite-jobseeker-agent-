@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/badge/version-2.0.0-1B2A4A?style=for-the-badge&logoColor=white)](https://github.com/emcdo411/elite-jobseeker-agent-)
 [![Framework](https://img.shields.io/badge/Epoch_Frameworks-Career_Intelligence-2563EB?style=for-the-badge&logoColor=white)](https://github.com/emcdo411/elite-jobseeker-agent-)
-[![License](https://img.shields.io/badge/License-DACR_v2.7-darkred?style=for-the-badge&logoColor=white)](https://github.com/emcdo411/elite-jobseeker-agent-/blob/main/DACR%20LICENSE.md)
+[![License](https://img.shields.io/badge/License-DACR_v2.7-darkred?style=for-the-badge&logoColor=white)](./LICENSE-DACR.md)
 [![Target](https://img.shields.io/badge/Target_Comp-%24120K--200K%2B-228B22?style=for-the-badge&logoColor=white)](https://github.com/emcdo411/elite-jobseeker-agent-)
 [![Author](https://img.shields.io/badge/Author-Erwin_Maurice_McDonald-6B7280?style=for-the-badge&logoColor=white)](https://linkedin.com/in/mauricemcdonald)
 
@@ -176,7 +176,7 @@ elite-jobseeker-agent-/
 ├── agents/                  # Agent configuration and phase logic
 ├── frameworks/              # Supporting framework definitions
 ├── README.md                # This file
-└── DACR LICENSE.md          # Defensive Attribution & Controlled Reuse License
+└── LICENSE-DACR.md          # Defensive Attribution & Controlled Reuse License
 ```
 
 ---
@@ -201,11 +201,11 @@ elite-jobseeker-agent-/
 
 ## License
 
-[![License](https://img.shields.io/badge/License-DACR_v2.7-darkred?style=for-the-badge&logoColor=white)](https://github.com/emcdo411/elite-jobseeker-agent-/blob/main/DACR%20LICENSE.md)
+[![License](https://img.shields.io/badge/License-DACR_v2.7-darkred?style=for-the-badge&logoColor=white)](./LICENSE-DACR.md)
 
 This framework is licensed under the **Defensive Attribution & Controlled Reuse (DACR) License v2.7**.
 
-Commercial use, redistribution, derivative frameworks, and enterprise deployment require written authorization from the author. Attribution is mandatory in all permitted uses. See [DACR LICENSE.md](https://github.com/emcdo411/elite-jobseeker-agent-/blob/main/DACR%20LICENSE.md) for full terms.
+Commercial use, redistribution, derivative frameworks, and enterprise deployment require written authorization from the author. Attribution is mandatory in all permitted uses. See [LICENSE-DACR.md](./LICENSE-DACR.md) for full terms.
 
 ---
 
